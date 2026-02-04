@@ -350,6 +350,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
+      propertyPath: isRotating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
       propertyPath: rotationSpeed
       value: 30
       objectReference: {fileID: 0}
@@ -685,6 +689,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
       propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
+      propertyPath: isRotating
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
@@ -1422,6 +1430,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
+      propertyPath: isRotating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
       propertyPath: rotationSpeed
       value: 30
       objectReference: {fileID: 0}
@@ -1700,6 +1712,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
       propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
+      propertyPath: isRotating
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
@@ -8614,6 +8630,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
+      propertyPath: isRotating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
       propertyPath: rotationSpeed
       value: 30
       objectReference: {fileID: 0}
@@ -8705,6 +8725,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
       propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
+      propertyPath: isRotating
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
@@ -10021,6 +10045,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
       propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
+      propertyPath: isRotating
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775982364962297164, guid: e61c9a4b7ad4e684f9866d27135607f5, type: 3}
@@ -13050,6 +13078,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
       propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
+      propertyPath: isRotating
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7621981584965302771, guid: f4872b50e9e39e3469946219b9ee754b, type: 3}
