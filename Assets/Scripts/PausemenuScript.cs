@@ -49,4 +49,10 @@ public class PausemenuScript : MonoBehaviour
         Debug.Log("Quitting Game");
         Application.Quit();
     }
+
+    public void RestartCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+    }
 }
