@@ -32,6 +32,22 @@ public class WASDScript : MonoBehaviour
         {
             PlayerPosition.x -= PlayerSpeed / 95;
         }
+        if (Keyboard.current.upArrowKey.isPressed == true)
+        {
+            PlayerPosition.y += PlayerSpeed / 95;
+        }
+        if (Keyboard.current.downArrowKey.isPressed == true)
+        {
+            PlayerPosition.y -= PlayerSpeed / 95;
+        }
+        if (Keyboard.current.rightArrowKey.isPressed == true)
+        {
+            PlayerPosition.x += PlayerSpeed / 95;
+        }
+        if (Keyboard.current.leftArrowKey.isPressed == true)
+        {
+            PlayerPosition.x -= PlayerSpeed / 95;
+        }
         this.transform.position = PlayerPosition;
     }
 }
