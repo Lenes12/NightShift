@@ -4,24 +4,23 @@ using System.Collections.Generic;
 
 public class MovementScript : MonoBehaviour
 {
-    public float speed = 100f;
-    public Rigidbody rb;
-    public Vector3 movement;
+    public float speed = 3f;
+    private Rigidbody rb;
 
-   
+
     void Start()
-    { 
-        rb = this.GetComponent<Rigidbody>();
-    }
-  
-    private void Update()
     {
-        
-        movement = new Vector3(Input.GetAxis("Horizontal"), 0 ,Input.GetAxis("Vertical"))* speed;
+        rb = GetComponent<Rigidbody>();
     }
-    private void FixedUpdate()
+
+     void FixedUpdate()
     {
-       rb.angularVelocity = (movement);
-    
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(h,v,0.0f);
+        transform.Translate(movement * speed * Time.deltaTime);
+        rb.AddForce(movement * speed);
     }
+   
 }
