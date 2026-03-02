@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Buildings
   - Collectables
+  - WinCounter
   layers:
   - Default
   - TransparentFX
