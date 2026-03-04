@@ -3,22 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class WinScript : MonoBehaviour
 {
-    public GameObject WinScreenUI;
-    public static bool  WinScreenPop = false; 
+    
 
     // Update is called once per frame
     void Update()
     {
-        {
-            if (WinScreenPop)
-            {
-                Dormant ();
-            }
-            else 
-            {
-                Active();
-            }
-        }
+       
     }
     public void NextLevel() 
     {
@@ -32,17 +22,5 @@ public class WinScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
-    public void Dormant() 
-    {
-        WinScreenUI.SetActive(false);
-        Time.timeScale = 1f; 
-        WinScreenPop = false;
-    }
-
-    void Active()
-    { 
-        WinScreenUI.SetActive(true);
-        Time.timeScale = 0f;
-        WinScreenPop = true;
-    }
+    
 }
