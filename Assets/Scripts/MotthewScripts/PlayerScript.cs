@@ -11,16 +11,25 @@ public class PlayerScript : MonoBehaviour
 
     private Rigidbody rb;
 
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI score1Text;
+
+    public TextMeshProUGUI score2Text;
 
     public ScoreManagerWin scoreManager;
+
+    public ScoreManagerLose scoreManagerL;
+
+    private Vector3 startPosition;
+
+    private Quaternion startRotation;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        scoreText.text = "Ingredients Collected: " + ScoreManagerWin.totalScore;
+        score1Text.text = "Ingredients Collected: " + ScoreManagerWin.totalScore;
         scoreManager = FindFirstObjectByType<ScoreManagerWin>();
 
+        scoreManagerL = FindFirstObjectByType<ScoreManagerLose>();
     }
 
      void FixedUpdate()
@@ -33,14 +42,40 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(movement * speed);
     }
 
+    void Awake()
+    {
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+    }
+
+    public void ResetPlayerToStart()
+    {
+        transform.position = startPosition;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.angularVelocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
+        }
+    }
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.tag == "Collectables")
         {
             ScoreManagerWin.totalScore += 1;
             scoreManager.CollectObject();
-            scoreText.text = "Ingredients Collected:  " + ScoreManagerWin.totalScore;
+            score1Text.text = "Ingredients Collected:  " + ScoreManagerWin.totalScore;
             collision.gameObject.SetActive(false);
         }
+
+        if (collision.tag == "Distract")
+        {
+            scoreManagerL.CollectObject();
+            collision.gameObject.SetActive(false);
+
+            ResetPlayerToStart();
+        }
     }
+    
 }
