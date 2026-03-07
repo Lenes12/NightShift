@@ -52,7 +52,7 @@ public class ScoreManagerWin : MonoBehaviour
     {
         if (countText !=null)
         {
-            countText.text = "Ingredients Collected: " + collectedCount.ToString() + "/" + totalCollectibles.ToString();
+            countText.text = "Ingredients Collected: " + collectedCount.ToString() + "/" + totalCollectibles;
         }
     }
     

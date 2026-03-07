@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        score1Text.text = "Ingredients Collected: " + ScoreManagerWin.totalScore;
+        
         scoreManager = FindFirstObjectByType<ScoreManagerWin>();
 
         scoreManagerL = FindFirstObjectByType<ScoreManagerLose>();
@@ -63,9 +63,7 @@ public class PlayerScript : MonoBehaviour
     {
         if(collision.tag == "Collectables")
         {
-            ScoreManagerWin.totalScore += 1;
             scoreManager.CollectObject();
-            score1Text.text = "Ingredients Collected:  " + ScoreManagerWin.totalScore;
             collision.gameObject.SetActive(false);
         }
 
