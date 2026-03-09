@@ -23,6 +23,8 @@ public class PlayerScript : MonoBehaviour
 
     private Quaternion startRotation;
 
+    public RoadblockInScript blockUP;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -75,5 +77,4 @@ public class PlayerScript : MonoBehaviour
             ResetPlayerToStart();
         }
     }
-    
 }

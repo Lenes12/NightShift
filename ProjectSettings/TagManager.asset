@@ -9,6 +9,9 @@ TagManager:
   - WinCounter
   - Distract
   - Block
+  - Block2
+  - Block3
+  - Button
   layers:
   - Default
   - TransparentFX
