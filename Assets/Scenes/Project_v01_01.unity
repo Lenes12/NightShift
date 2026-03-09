@@ -3448,7 +3448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*This is a roadblock. Clicking on a BLUE button nearby will remove it. '
+  m_text: '*This is a roadblock. Pressing E on a BLUE button nearby will remove it. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
   m_sharedMaterial: {fileID: -5571592025542048100, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
@@ -10419,7 +10419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*This is a roadblock. Clicking on a GREY button nearby will remove it. '
+  m_text: '*This is a roadblock. Pressing E on a GREY button nearby will remove it. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
   m_sharedMaterial: {fileID: -5571592025542048100, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
@@ -12237,12 +12237,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.92847145
+  m_Center: {x: 0.07983689, y: -0.00001176109, z: 0}
 --- !u!23 &1338143324
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12313,6 +12313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Button1PressScript
   GateObject: {fileID: 6825092871130953445}
+  Button: {fileID: 1338143321}
 --- !u!65 &1347165292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13324,7 +13325,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*This is a roadblock. Clicking on a BLACK button nearby will remove it. '
+  m_text: '*This is a roadblock. Pressing E on a BLACK button nearby will remove
+    it. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
   m_sharedMaterial: {fileID: -5571592025542048100, guid: b633915a7eab00342a258e5c2f50a75f, type: 2}
@@ -13760,10 +13762,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1712218599}
+  - {fileID: 6195907876240718407}
   - {fileID: 1549942363}
   - {fileID: 1338143322}
   - {fileID: 6195907875638864991}
-  - {fileID: 6195907876240718407}
   - {fileID: 6195907875409398619}
   - {fileID: 1718533856}
   - {fileID: 156196129}
@@ -14602,12 +14604,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.9230754
+  m_Center: {x: 0.028125014, y: 0, z: 0}
 --- !u!23 &1549942365
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14678,6 +14680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Button1PressScript
   GateObject: {fileID: 6825092871358697953}
+  Button: {fileID: 1549942362}
 --- !u!1001 &1564113134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16736,12 +16739,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.0013471
+  m_Center: {x: -0.058253985, y: 0, z: 0}
 --- !u!23 &1712218601
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16810,8 +16813,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4035d0b242a3e934c9185be673b7065f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonPressScript
   GateObject: {fileID: 6825092871468556541}
+  Button: {fileID: 1712218598}
 --- !u!1001 &1717467309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21705,7 +21709,7 @@ Transform:
   m_GameObject: {fileID: 6825092871468556541}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 10.675, y: -1.423, z: 0}
+  m_LocalPosition: {x: 10.675, y: -1.4229999, z: 0}
   m_LocalScale: {x: 0.22423278, y: 0.23606934, z: 0.23606934}
   m_ConstrainProportionsScale: 0
   m_Children: []
