@@ -18,6 +18,7 @@ public class ScoreManagerLose : MonoBehaviour
 
     public GameObject LoseScreenUI;
 
+
     public void Start()
     {
         if ( LoseScreenUI != null )
@@ -63,4 +64,5 @@ public class ScoreManagerLose : MonoBehaviour
 
         Time.timeScale = 0f;
     }
+    
 }

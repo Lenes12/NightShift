@@ -7,7 +7,10 @@ using System.Collections.Generic;
 public class ButtonPressScript : MonoBehaviour
 {
     public GameObject GateObject;
+    
     public GameObject Button;
+
+    public GameObject ButtonAlert;
 
     private bool playerNear = false;
 
@@ -17,6 +20,7 @@ public class ButtonPressScript : MonoBehaviour
         {
             GateObject.SetActive(true);
         }
+        ButtonAlert.SetActive(false);
     }
 
     void Update()
@@ -26,7 +30,10 @@ public class ButtonPressScript : MonoBehaviour
             if (GateObject != null)
             {
                 GateObject.SetActive(false);
+                
                 Destroy(Button);
+
+                Destroy(ButtonAlert);
             }
         }
     }
@@ -36,6 +43,8 @@ public class ButtonPressScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNear = true;
+
+            ButtonAlert.SetActive(true);
         }
     }
 
@@ -44,6 +53,8 @@ public class ButtonPressScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNear = false;
+
+            ButtonAlert.SetActive(false);
         }
     }
 
