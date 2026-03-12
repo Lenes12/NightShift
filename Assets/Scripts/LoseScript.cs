@@ -4,13 +4,19 @@ using UnityEngine.SceneManagement;
 
 public class LoseScript : MonoBehaviour
 {
-    
+    public AudioClip soundEffectClip; 
+    private AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
+
+    public void Start()
     {
-        
-       
+        audioSource = GetComponent<AudioSource>();
+
+    }
+        void Update()
+    {
+        audioSource.PlayOneShot(soundEffectClip);
+
     }
     public void RestartCurrentLevel()
     { SceneManager.LoadScene(SceneManager.GetActiveScene().name); 

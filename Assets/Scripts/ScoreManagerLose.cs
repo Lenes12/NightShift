@@ -1,10 +1,12 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+
 
 public class ScoreManagerLose : MonoBehaviour
 {
@@ -18,21 +20,32 @@ public class ScoreManagerLose : MonoBehaviour
 
     public GameObject LoseScreenUI;
 
+    public AudioClip soundEffectClip;
+
+    private AudioSource audioSource;
+
+
+
+
 
     public void Start()
     {
-        if ( LoseScreenUI != null )
+
+        if (LoseScreenUI != null)
         {
-            LoseScreenUI.SetActive( false );
+            LoseScreenUI.SetActive(false);
         }
 
-        UpdateCountText();
+        audioSource = GetComponent<AudioSource>();
 
+        UpdateCountText();
     }
 
     public void CollectObject()
     {
         collectedCount++;
+
+        audioSource.PlayOneShot(soundEffectClip);
 
         UpdateCountText();
 
@@ -48,7 +61,9 @@ public class ScoreManagerLose : MonoBehaviour
         if (countText != null)
         {
             countText.text = "Distractions: " + collectedCount.ToString() + "/" + totalLoss;
+             
         }
+        
     }
 
     void LoseGame()
@@ -56,13 +71,9 @@ public class ScoreManagerLose : MonoBehaviour
         if (LoseScreenUI != null)
         {
             LoseScreenUI.SetActive(true);
-        }
-        else
-        {
-            Debug.Log("LoseScreenUI is NULL");
-        }
 
+             
+        }
         Time.timeScale = 0f;
     }
-    
 }

@@ -14,26 +14,36 @@ public class ButtonPressScript : MonoBehaviour
 
     private bool playerNear = false;
 
-    void Start()
+    public AudioClip soundEffectClip;
+
+    private AudioSource audioSource;
+
+    public void Start()
     {
         if (GateObject != null)
         {
             GateObject.SetActive(true);
         }
         ButtonAlert.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (playerNear && Input.GetKeyDown(KeyCode.E))
         {
+
+            audioSource.PlayOneShot(soundEffectClip); 
+
             if (GateObject != null)
             {
                 GateObject.SetActive(false);
                 
-                Destroy(Button);
+                Destroy(Button, 0.5f);
 
                 Destroy(ButtonAlert);
+
             }
         }
     }

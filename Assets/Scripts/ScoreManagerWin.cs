@@ -18,6 +18,9 @@ public class ScoreManagerWin : MonoBehaviour
     
     public GameObject WinScreenUI;
 
+    public AudioClip soundEffectClip;
+
+    private AudioSource audioSource; 
 
 
     public void Start()
@@ -27,16 +30,19 @@ public class ScoreManagerWin : MonoBehaviour
             WinScreenUI.SetActive(false); 
             
         }
-       
-            UpdateCountText();
+
+        audioSource = GetComponent<AudioSource>();
+
+        UpdateCountText();
         
     }
 
     public void CollectObject()
     {
         collectedCount++;
-       
-       
+
+        audioSource.PlayOneShot(soundEffectClip);
+
         UpdateCountText();
 
         

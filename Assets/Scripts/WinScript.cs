@@ -3,12 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class WinScript : MonoBehaviour
 {
-    
+    public AudioClip soundEffectClip;
+    private AudioSource audioSource;
 
-    // Update is called once per frame
+    public void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+    }
+
     void Update()
     {
        
+       audioSource.PlayOneShot(soundEffectClip);
+
     }
     public void NextLevel() 
     {

@@ -24,6 +24,10 @@ public class PlayerScript : MonoBehaviour
     private Quaternion startRotation;
 
     public RoadblockInScript blockUP;
+    
+    public AudioClip soundEffectClip;
+  
+    private AudioSource audioSource;
 
     void Start()
     {
