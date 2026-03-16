@@ -12,6 +12,7 @@ TagManager:
   - Block2
   - Block3
   - Button
+  - 'Horizontal '
   layers:
   - Default
   - TransparentFX

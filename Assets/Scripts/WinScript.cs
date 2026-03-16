@@ -17,6 +17,8 @@ public class WinScript : MonoBehaviour
        
        audioSource.PlayOneShot(soundEffectClip);
 
+        Time.timeScale = 0f;
+
     }
     public void NextLevel() 
     {
@@ -30,5 +32,9 @@ public class WinScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
-    
+    public void RestartCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+    }
 }

@@ -17,6 +17,8 @@ public class LoseScript : MonoBehaviour
     {
         audioSource.PlayOneShot(soundEffectClip);
 
+        Time.timeScale = 0f;
+
     }
     public void RestartCurrentLevel()
     { SceneManager.LoadScene(SceneManager.GetActiveScene().name); 

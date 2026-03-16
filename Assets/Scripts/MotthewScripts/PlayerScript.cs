@@ -80,5 +80,8 @@ public class PlayerScript : MonoBehaviour
 
             ResetPlayerToStart();
         }
+
+        if(collision.tag == "Horizontal")
+        { }
     }
 }
