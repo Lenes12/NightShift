@@ -24,6 +24,8 @@ public class ScoreManagerLose : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public TimeScript time;
+
 
 
 
@@ -74,6 +76,8 @@ public class ScoreManagerLose : MonoBehaviour
 
              
         }
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; 
+
+        time.StopTimer();
     }
 }

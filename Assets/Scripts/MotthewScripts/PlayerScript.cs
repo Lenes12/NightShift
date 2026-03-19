@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class PlayerScript : MonoBehaviour
   
     private AudioSource audioSource;
 
+    public bool isTeleporting = false;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,12 +44,17 @@ public class PlayerScript : MonoBehaviour
 
      void FixedUpdate()
     {
+        if (isTeleporting)
+        {
+            rb.linearVelocity = Vector3.zero;
+            return;
+        }
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+      
+        rb.linearVelocity = new Vector3(h * speed, v * speed, 0f);
 
-        Vector3 movement = new Vector3(h,v,0.0f);
-        transform.Translate(movement * speed * Time.deltaTime);
-        rb.AddForce(movement * speed);
     }
 
     void Awake()
@@ -80,8 +89,5 @@ public class PlayerScript : MonoBehaviour
 
             ResetPlayerToStart();
         }
-
-        if(collision.tag == "Horizontal")
-        { }
     }
 }

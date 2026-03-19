@@ -20,8 +20,9 @@ public class ScoreManagerWin : MonoBehaviour
 
     public AudioClip soundEffectClip;
 
-    private AudioSource audioSource; 
+    private AudioSource audioSource;
 
+    public TimeScript time;
 
     public void Start()
     {
@@ -50,7 +51,9 @@ public class ScoreManagerWin : MonoBehaviour
         {
             WinGame();
 
-            
+            time.StopTimer();
+            time.SaveBestTime();
+
         }
     }
 
